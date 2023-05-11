@@ -7,11 +7,10 @@ export default function ContactList({ visibleContacts, onDeleteContact }) {
     <ul className={css.contact__list}>
       {visibleContacts.map(({ id, name, number }) => (
         <ContactItem
-          id={id}
           key={id}
           name={name}
           number={number}
-          onDeleteContact={onDeleteContact}
+          onDeleteContact={() => onDeleteContact(id)}
         />
       ))}
     </ul>

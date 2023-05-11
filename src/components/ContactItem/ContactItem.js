@@ -1,7 +1,7 @@
 import css from './ContactItem.module.css';
 import PropTypes from 'prop-types';
 
-export default function ContactItem({ id, name, number, onDeleteContact }) {
+export default function ContactItem({ name, number, onDeleteContact }) {
   return (
     <li className={css.contact__item}>
       <p className={css.contact__text}>
@@ -9,7 +9,7 @@ export default function ContactItem({ id, name, number, onDeleteContact }) {
       </p>
       <button
         className={css.contactItem__btn}
-        onClick={() => onDeleteContact(id)}
+        onClick={onDeleteContact}
         type="button"
       >
         Del
